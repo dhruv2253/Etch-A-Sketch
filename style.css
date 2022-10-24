@@ -1,16 +1,74 @@
-.outer-container{
+/* Ice Cold: #a0d2eb
+
+Freeze Purple: #e5eaf5
+
+white Purple: #d0bdf4
+
+Purple Pain: #8458B3
+
+Heavy Purple: #494d5f */
+
+@font-face {
+    font-family: Roboto;
+    src: url(roboto-light-webfont.woff);
+}
+
+body {
+    background-color:  #494d5f;
+    font-family: Roboto;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    font-size: 48px;
+    color: #a0d2eb;
+    
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    
+    height: auto;
+    width: 200px;
+    background-color: white;
+}
+
+.clear {
+    
+    background-color: #a0d2eb;
+    border-radius: 10px;
+    border: 0;
+    padding: 10px;
+    width: 200px;
+    
+}
+
+.grid {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+
+}
+
+.outer-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    min-height: 100vh;
+    height: 550px;
+    width: 550px;
+    background-color: #d0bdf4;
+    border-radius: 10px;
 }
+
+
 .container {
     display: grid;
+    border: 1px solid;
     height: 500px;
     width: 500px;
-    border: 1px solid;
-    
+    background-color: white;
     
 
 }
@@ -24,3 +82,5 @@
     
     
 }
+
+

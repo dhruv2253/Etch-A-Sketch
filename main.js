@@ -1,4 +1,6 @@
 const container = document.querySelector('.container');
+const clearButton = document.querySelector('.clear');
+
 
 function createBoxes(numBox){
     container.style.gridTemplateColumns = `repeat(${numBox}, 1fr)`;
@@ -8,11 +10,20 @@ function createBoxes(numBox){
         container.appendChild(square);
         square.addEventListener('mouseenter', (e) =>
         e.target.style.backgroundColor = 'black');
-        console.log(numBox)
+        
+        clearButton.addEventListener('click', (e) =>
+        square.style.backgroundColor = 'white');
+        
+        console.log(numBox);
     }
 }
 
 createBoxes(16);
+
+
+
+
+
     
     
 
