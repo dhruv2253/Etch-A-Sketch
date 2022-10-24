@@ -1,16 +1,18 @@
 const container = document.querySelector('.container');
 
+function createBoxes(numBox){
+    container.style.gridTemplateColumns = `repeat(${numBox}, 1fr)`;
+    for(let i = 0;i < numBox*numBox;i++){
+        const square = document.createElement('div');
+        square.id = 'grid-square'
+        container.appendChild(square);
+        square.addEventListener('mouseenter', (e) =>
+        e.target.style.backgroundColor = 'black');
+        console.log(numBox)
+    }
+}
 
-const num = 16;
- for(let i = 0; i<Math.pow(num, 2); i++){
-    const div = document.createElement('div');
-     div.id = 'grid-square';
-     container.appendChild(div);
-     console.log(num);
-
-     div.addEventListener('mouseenter', (e) =>
-    e.target.style.backgroundColor = 'black');
- }
+createBoxes(16);
     
     
 

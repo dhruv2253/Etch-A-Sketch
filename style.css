@@ -1,8 +1,26 @@
-#grid-square {
-    display: inline-block;
+.outer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+.container {
+    display: grid;
+    height: 500px;
+    width: 500px;
     border: 1px solid;
+    
+    
+
+}
+#grid-square {
+    margin: 0;
+    border: 1px black;
+    box-sizing: border-box;
     border-color: black;
-    height: 20px;
-    width: 20px;
+    height: auto;
+    width: auto;
+    
     
 }
