@@ -25,17 +25,27 @@ body {
     color: #a0d2eb;
     
 }
-
-.settings {
+.middle {
     display: flex;
-    flex-direction: column;
-    
-    height: auto;
-    width: 200px;
-    background-color: white;
+    justify-content: center;
 }
 
-.clear {
+
+
+
+.settings {
+   
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column-reverse;
+    
+    height: 500px;
+    width: 200px;
+    
+    
+}
+
+.clear, .size {
     
     background-color: #a0d2eb;
     border-radius: 10px;
@@ -47,9 +57,10 @@ body {
 
 .grid {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     margin-top: 20px;
-
+    margin-left: 240px;
+    margin-right: 50px;
 }
 
 .outer-container {
@@ -60,6 +71,7 @@ body {
     width: 550px;
     background-color: #d0bdf4;
     border-radius: 10px;
+    
 }
 
 
