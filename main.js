@@ -4,6 +4,7 @@ const sizeButton = document.querySelector('.size');
 const rainbowButton = document.querySelector('.rainbow');
 const greyButton = document.querySelector('.greyscale');
 const blackButton = document.querySelector('.black');
+const sizeForm = document.querySelector('#size-form');
 
 // Functions 
 function createBoxes(numBox){
@@ -86,7 +87,7 @@ rainbowButton.addEventListener('click', () => {
         const g = randomBetween(0, 255);
         const b = randomBetween(0, 255);
         const rgb = `rgb(${r},${g},${b})`;
-        
+
         square.addEventListener('mouseover', () => {
             // change square color to a random color
             square.style.backgroundColor = rgb;
@@ -96,10 +97,19 @@ rainbowButton.addEventListener('click', () => {
 });
 
 // Change size of the grid based on user input
-sizeButton.addEventListener('click', () => {
-    const prompt = window.prompt("Enter number of squares per side.");
-    clearButton.addEventListener('click', clear);
-    createBoxes(prompt);
+sizeForm.addEventListener('submit', (e) => {
+    const size = document.querySelector('#size');
+    e.preventDefault();
+    clear();
+    if (typeof size.value != Number || size.value>250){
+        size.value = "Invalid Input"
+        
+        size.addEventListener('focus', () => {
+            size.value = ""
+        })
+    }
+    createBoxes(size);
+    console.log(size);
 });
 
 // Clear board when button is clicked
