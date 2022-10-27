@@ -38,10 +38,9 @@ body {
     display: flex;
     justify-content: space-evenly;
     flex-direction: column-reverse;
-    
     height: 500px;
     width: 200px;
-    
+    margin: 10px;
     
 }
 
@@ -56,11 +55,9 @@ body {
 }
 
 .grid {
-    display: flex;
-    justify-content: center;
+    
     margin-top: 20px;
-    margin-left: 240px;
-    margin-right: 50px;
+   
 }
 
 .outer-container {
